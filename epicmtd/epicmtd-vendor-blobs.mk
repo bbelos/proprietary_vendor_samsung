@@ -18,8 +18,7 @@
 # prelink
 #
 PRODUCT_COPY_FILES += \
-    vendor/samsung/epicmtd/proprietary/lib/libsecril-client.so:obj/lib/libsecrilclient.so \
-    vendor/samsung/epicmtd/proprietary/lib/libsec-ril40.so:obj/lib/libsec-ril40.so
+    vendor/samsung/crespo4g/proprietary/libsecril-client.so:obj/lib/libsecril-client.so \
 
 #
 # Wifi
@@ -73,10 +72,8 @@ PRODUCT_COPY_FILES += \
 # RIL
 #
 PRODUCT_COPY_FILES += \
-    vendor/samsung/epicmtd/proprietary/bin/rild:system/bin/rild \
-    vendor/samsung/epicmtd/proprietary/lib/libsec-ril40.so:system/lib/libsec-ril40.so \
-    vendor/samsung/epicmtd/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
-    vendor/samsung/epicmtd/proprietary/lib/libril.so:system/lib/libril.so
+    vendor/samsung/crespo4g/proprietary/libsecril-client.so:system/lib/libsecril-client.so \
+    vendor/samsung/crespo4g/proprietary/libsec-ril.so:system/vendor/lib/libsec-ril.so
 
 #
 # GPS
