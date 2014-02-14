@@ -143,12 +143,12 @@
     invoke-virtual {v6, v7}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 2257
-    new-instance v2, Landroid/net/DhcpInfoInternal;
+    new-instance v2, Landroid/net/DhcpResults;
 
-    invoke-direct {v2}, Landroid/net/DhcpInfoInternal;-><init>()V
+    invoke-direct {v2}, Landroid/net/DhcpResults;-><init>()V
 
     .line 2258
-    .local v2, newInfo:Landroid/net/DhcpInfoInternal;
+    .local v2, newInfo:Landroid/net/DhcpResults;
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
     #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->m_bLog:Z
@@ -173,7 +173,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v2}, Landroid/net/NetworkUtils;->runDhcp(Ljava/lang/String;Landroid/net/DhcpInfoInternal;)Z
+    invoke-static {v6, v2}, Landroid/net/NetworkUtils;->runDhcp(Ljava/lang/String;Landroid/net/DhcpResults;)Z
 
     move-result v6
 
@@ -182,8 +182,8 @@
     .line 2260
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #setter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v6, v2}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$502(Landroid/net/fourG/wimax/WimaxStateTracker;Landroid/net/DhcpInfoInternal;)Landroid/net/DhcpInfoInternal;
+    #setter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v6, v2}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$502(Landroid/net/fourG/wimax/WimaxStateTracker;Landroid/net/DhcpResults;)Landroid/net/DhcpResults;
 
     .line 2261
     const/4 v0, 0x2
@@ -215,8 +215,8 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
@@ -267,12 +267,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    iget v8, v8, Landroid/net/DhcpInfoInternal;->leaseDuration:I
+    iget v8, v8, Landroid/net/DhcpResults;->leaseDuration:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -292,12 +292,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    iget v8, v8, Landroid/net/DhcpInfoInternal;->leaseDuration:I
+    iget v8, v8, Landroid/net/DhcpResults;->leaseDuration:I
 
     add-int/lit8 v8, v8, -0x1e
 
@@ -351,7 +351,7 @@
 
     .line 2244
     .end local v0           #event:I
-    .end local v2           #newInfo:Landroid/net/DhcpInfoInternal;
+    .end local v2           #newInfo:Landroid/net/DhcpResults;
     :catchall_ee
     move-exception v6
 
@@ -363,7 +363,7 @@
     throw v6
 
     .line 2263
-    .restart local v2       #newInfo:Landroid/net/DhcpInfoInternal;
+    .restart local v2       #newInfo:Landroid/net/DhcpResults;
     :cond_f1
     const/4 v0, 0x3
 
@@ -408,7 +408,7 @@
 
     .line 2280
     .end local v0           #event:I
-    .end local v2           #newInfo:Landroid/net/DhcpInfoInternal;
+    .end local v2           #newInfo:Landroid/net/DhcpResults;
     :sswitch_118
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
@@ -450,12 +450,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/net/DhcpInfoInternal;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Landroid/net/DhcpResults;->toString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -475,12 +475,12 @@
 
     iget-object v7, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v7}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v7}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v7
 
-    iget-object v7, v7, Landroid/net/DhcpInfoInternal;->ipAddress:Ljava/lang/String;
+    iget-object v7, v7, Landroid/net/DhcpResults;->ipAddress:Ljava/lang/String;
 
     #calls: Landroid/net/fourG/wimax/WimaxStateTracker;->stringToIpAddr(Ljava/lang/String;)I
     invoke-static {v7}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$700(Ljava/lang/String;)I
@@ -654,12 +654,12 @@
     invoke-virtual {v6, v7}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 2302
-    new-instance v3, Landroid/net/DhcpInfoInternal;
+    new-instance v3, Landroid/net/DhcpResults;
 
-    invoke-direct {v3}, Landroid/net/DhcpInfoInternal;-><init>()V
+    invoke-direct {v3}, Landroid/net/DhcpResults;-><init>()V
 
     .line 2303
-    .local v3, renewInfo:Landroid/net/DhcpInfoInternal;
+    .local v3, renewInfo:Landroid/net/DhcpResults;
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
     #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mInterfaceName:Ljava/lang/String;
@@ -667,7 +667,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v3}, Landroid/net/NetworkUtils;->runDhcpRenew(Ljava/lang/String;Landroid/net/DhcpInfoInternal;)Z
+    invoke-static {v6, v3}, Landroid/net/NetworkUtils;->runDhcpRenew(Ljava/lang/String;Landroid/net/DhcpResults;)Z
 
     move-result v6
 
@@ -676,8 +676,8 @@
     .line 2304
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #setter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v6, v3}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$502(Landroid/net/fourG/wimax/WimaxStateTracker;Landroid/net/DhcpInfoInternal;)Landroid/net/DhcpInfoInternal;
+    #setter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v6, v3}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$502(Landroid/net/fourG/wimax/WimaxStateTracker;Landroid/net/DhcpResults;)Landroid/net/DhcpResults;
 
     .line 2305
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
@@ -703,8 +703,8 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
@@ -747,12 +747,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/net/DhcpInfoInternal;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Landroid/net/DhcpResults;->toString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -770,12 +770,12 @@
     :cond_24b
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v6}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v6}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v6
 
-    iget-object v6, v6, Landroid/net/DhcpInfoInternal;->ipAddress:Ljava/lang/String;
+    iget-object v6, v6, Landroid/net/DhcpResults;->ipAddress:Ljava/lang/String;
 
     #calls: Landroid/net/fourG/wimax/WimaxStateTracker;->stringToIpAddr(Ljava/lang/String;)I
     invoke-static {v6}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$700(Ljava/lang/String;)I
@@ -873,12 +873,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    iget v8, v8, Landroid/net/DhcpInfoInternal;->leaseDuration:I
+    iget v8, v8, Landroid/net/DhcpResults;->leaseDuration:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -898,12 +898,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    iget v8, v8, Landroid/net/DhcpInfoInternal;->leaseDuration:I
+    iget v8, v8, Landroid/net/DhcpResults;->leaseDuration:I
 
     add-int/lit8 v8, v8, -0x1e
 
@@ -1071,7 +1071,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v3}, Landroid/net/NetworkUtils;->runDhcpRenew(Ljava/lang/String;Landroid/net/DhcpInfoInternal;)Z
+    invoke-static {v6, v3}, Landroid/net/NetworkUtils;->runDhcpRenew(Ljava/lang/String;Landroid/net/DhcpResults;)Z
 
     move-result v6
 
@@ -1080,8 +1080,8 @@
     .line 2324
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #setter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v6, v3}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$502(Landroid/net/fourG/wimax/WimaxStateTracker;Landroid/net/DhcpInfoInternal;)Landroid/net/DhcpInfoInternal;
+    #setter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v6, v3}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$502(Landroid/net/fourG/wimax/WimaxStateTracker;Landroid/net/DhcpResults;)Landroid/net/DhcpResults;
 
     .line 2325
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
@@ -1107,8 +1107,8 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
@@ -1150,12 +1150,12 @@
 
     iget-object v8, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v8}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/net/DhcpInfoInternal;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Landroid/net/DhcpResults;->toString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1173,12 +1173,12 @@
     :cond_3a5
     iget-object v6, p0, Landroid/net/fourG/wimax/WimaxStateTracker$DhcpHandler;->this$0:Landroid/net/fourG/wimax/WimaxStateTracker;
 
-    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpInfoInternal;
-    invoke-static {v6}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpInfoInternal;
+    #getter for: Landroid/net/fourG/wimax/WimaxStateTracker;->mDhcpInfoInt:Landroid/net/DhcpResults;
+    invoke-static {v6}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$500(Landroid/net/fourG/wimax/WimaxStateTracker;)Landroid/net/DhcpResults;
 
     move-result-object v6
 
-    iget-object v6, v6, Landroid/net/DhcpInfoInternal;->ipAddress:Ljava/lang/String;
+    iget-object v6, v6, Landroid/net/DhcpResults;->ipAddress:Ljava/lang/String;
 
     #calls: Landroid/net/fourG/wimax/WimaxStateTracker;->stringToIpAddr(Ljava/lang/String;)I
     invoke-static {v6}, Landroid/net/fourG/wimax/WimaxStateTracker;->access$700(Ljava/lang/String;)I
